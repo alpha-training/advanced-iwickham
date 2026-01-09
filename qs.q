@@ -4,8 +4,8 @@ HEADERS:string`vars`state`indicators`enter`signal_exit`stop_loss`take_profit`tim
 l:{[p]
   lines:read0 p;
   lines:lines where 0<count each lines;
-  header:(-1_'lines)in .qs.HEADERS;  
-  if[not all(1_header)=1_not lines like" *";'"(invalid header(s):ars:)"]
+  header:(-1_'lines)in .qs.HEADERS;
+  if[not all (1_header)=1_not lines like" *";'"(invalid header(s):"," " sv .qs.HEADERS where not (1_header)=1_not lines like" *",":)"]
   sections:(where header)_lines;
   processSection each sections;:;
  }
