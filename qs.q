@@ -5,6 +5,7 @@ l:{[p]
   lines:read0 p;
   lines:lines where 0<count each lines;
   header:(-1_'lines)in .qs.HEADERS;  
+  if[not all (1_header)=1_not lines like " *";'"(invalid header(s):ars:)"]
   sections:(where header)_lines;
   processSection each sections;:;
  }
