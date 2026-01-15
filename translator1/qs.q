@@ -1,5 +1,3 @@
-
-
 \d .qs
 HEADERS:string`vars`state`indicators`enter`signal_exit`stop_loss`take_profit`time_stop`trailing_stop`exit_policy`execution
 
@@ -38,7 +36,7 @@ argchecker:{[line]
   d:starts cut line;
   ends:d ss'"]";
   fns:(ends+1)#'d;
-  fnsq:{".qs.",x}each fns;
+  fnsq:".qs.",/:fns;
   cntarg:count each(get each get each(`$("[" vs'fnsq)[;0]))[;1];
   parsearg:1+sum each fns in'";";
   if[any z:not cntarg=parsearg;'"Too many arguments provided: ",ssr[raze fns where z;"func.";""]]
