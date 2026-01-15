@@ -23,7 +23,6 @@ processSection:{[x]
 
 parsef:{[file]
   lines:read0 file;
-  lines:file;
   lines:lines where 0<count each lines;
   goodexpression each lines;
   changes:(("(";"[");(")";"]");(",";";");(" [[]";"["));
