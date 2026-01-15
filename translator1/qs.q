@@ -39,8 +39,8 @@ argchecker:{[line]
   d:starts cut line;
   ends:d ss'"]";
   fns:(ends+1)#'d;
-  fnsq:{".qs.",x}each fns;dbg
-  cntarg:count each(get each get each (`$("[" vs'fnsq)[;0]))[;1];
+  fnsq:{".qs.",x}each fns;
+  cntarg:count each(get each get each(`$("[" vs'fnsq)[;0]))[;1];
   parsearg:1+sum each fns in'";";
   if[any z:not cntarg=parsearg;'"Too many arguments provided: ",ssr[raze fns where z;"func.";""]]
  }
