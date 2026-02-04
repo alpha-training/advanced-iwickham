@@ -1,0 +1,1 @@
+{"packages":{"event":{"repo":"alpha-training/qi-event","ref":"main","sha":"b11522fd8683e9d8ea94fc8a9fed2ef1abfbbf2f"},"cron":{"repo":"alpha-training/qi-cron","ref":"v0.1.2","sha":"1bb55cb7f5e2a33cd0ad1ef3a71f1ba145446a36"},"log":{"repo":"alpha-training/qi-log","ref":"main","sha":"7270776927056af542ab5fdb0c487b8c4124e68a"}}}
